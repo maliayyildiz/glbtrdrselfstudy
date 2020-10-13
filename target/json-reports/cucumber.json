@@ -1,0 +1,270 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 13296000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the global trader page",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1095000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on Join Now button",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on Login/Registration page",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-13T23:14:43.313Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "user_should_signup_with_valid_email",
+        "description": "",
+        "id": "glb-signup;user-should-signup-with-valid-email",
+        "after": [
+          {
+            "result": {
+              "duration": 1270000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.teraDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 112000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "user clicks email box and input valid data \"mv@vm.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mv@vm.com\"",
+                  "offset": 43
+                }
+              ],
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_email_box_and_input_valid_data(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 357000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "clicks signup button",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.clicks_signup_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 87000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user should not see red message under email box",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_not_see_red_message_under_email_box()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@hooks"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 11407000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the global trader page",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1156000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on Join Now button",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on Login/Registration page",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-13T23:14:59.678Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "user_should_not_signup_with_invalid_email",
+        "description": "",
+        "id": "glb-signup;user-should-not-signup-with-invalid-email",
+        "after": [
+          {
+            "result": {
+              "duration": 1227000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepdefinitions.Hooks.teraDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 85000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user clicks email box and input invalid data \"mw\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mw\"",
+                  "offset": 45
+                }
+              ],
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_email_box_and_input_invalid_data(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 83000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "clicks signup button",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.clicks_signup_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user should see red message under email box",
+            "match": {
+              "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_see_red_message_under_email_box()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@hooks"
+          }
+        ]
+      }
+    ],
+    "name": "glb_signup",
+    "description": "",
+    "id": "glb-signup",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/glb_signup.feature",
+    "tags": [
+      {
+        "name": "@hooks",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="30.807">
+<testcase classname="glb_signup" name="user_should_signup_with_valid_email" time="16.365">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login/Registration page....................................passed
+When user clicks email box and input valid data "mv@vm.com".................passed
+When clicks signup button...................................................passed
+Then user should not see red message under email box........................passed
+]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_should_not_signup_with_invalid_email" time="14.02">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login/Registration page....................................passed
+When user clicks email box and input invalid data "mw"......................passed
+When clicks signup button...................................................passed
+Then user should see red message under email box............................passed
+]]></system-out>
+</testcase>
+</testsuite>
