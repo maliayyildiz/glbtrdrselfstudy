@@ -112,6 +112,53 @@ public class SignupEmailStepDefinitions {
         Assert.assertEquals(phoneRedMessage,globalTraderSignupPage.redPhoneMessage.getText());
     }
 
+    @When("user provide valid password into password box and click signup button {string}")
+    public void user_provide_valid_password_into_password_box_and_click_signup_button(String valid_password) {
+        globalTraderSignupPage.passwordBox.sendKeys(valid_password+Keys.ENTER);
+    }
+
+    @Then("user should not see red message under password box")
+    public void user_should_not_see_red_message_under_password_box() {
+        Assert.assertFalse(globalTraderSignupPage.redPasswordMessage.isDisplayed());
+    }
+
+    @When("user provide invalid password into password box or and click signup button {string}")
+    public void user_provide_invalid_password_into_password_box_or_and_click_signup_button(String invalid_password) {
+        globalTraderSignupPage.passwordBox.sendKeys(invalid_password+Keys.ENTER);
+    }
+
+    @Then("user should see red message under password box {string}")
+    public void user_should_see_red_message_under_password_box(String redPasswordMessage) {
+       Assert.assertEquals(redPasswordMessage,globalTraderSignupPage.redPasswordMessage.getText());
+    }
+    @When("user not provide password into password box or and click signup button {string}")
+    public void user_not_provide_password_into_password_box_or_and_click_signup_button(String invalid_password) {
+        globalTraderSignupPage.passwordBox.sendKeys(invalid_password+Keys.ENTER);
+    }
+
+    @Then("user should see red message under blank password box {string}")
+    public void user_should_see_red_message_under_blank_password_box(String redPasswordMessage) {
+        Assert.assertEquals(redPasswordMessage,globalTraderSignupPage.redPasswordMessage.getText());
+    }
+    @When("user must type same password to the confirmation box and click sigup button {string}")
+    public void user_must_type_same_password_to_the_confirmation_box_and_click_sigup_button(String rePassword) {
+        globalTraderSignupPage.passwordBox.sendKeys(rePassword);
+        globalTraderSignupPage.repasswordBox.sendKeys(rePassword+Keys.ENTER);
+    }
+
+    @Then("user should not see red message under confirmation box")
+    public void user_should_not_see_red_message_under_confirmation_box() {
+        Assert.assertFalse(globalTraderSignupPage.repasswordMessage.isDisplayed());
+    }
+    @When("user type different password to confirmation box and click signup button {string}")
+    public void user_type_different_password_to_confirmation_box_and_click_signup_button(String wrongPassword) {
+        globalTraderSignupPage.repasswordBox.sendKeys(wrongPassword+Keys.ENTER);
+    }
+
+    @Then("user see red message under confirmation box {string}")
+    public void user_see_red_message_under_confirmation_box(String message) {
+       Assert.assertEquals(message,globalTraderSignupPage.repasswordMessage.getText());
+    }
 
 
 }

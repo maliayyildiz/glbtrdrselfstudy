@@ -39,5 +39,22 @@ Feature: glb_signup
     When user leave phone box blank
     Then user see red message under phone box "Please Enter Your Phone."
 
+  Scenario: user_should_able_to_signup_with_valid_password
+    When user provide valid password into password box and click signup button "12345"
+    Then user should not see red message under password box
 
+  Scenario: user_should_not_able_to_signup_with_invalid_password
+    When user provide invalid password into password box or and click signup button "123"
+    Then user should see red message under password box "Please Enter Atleast 5 Character Password."
 
+  Scenario: user_should_not_able_to_signup_without_providing_password
+    When user not provide password into password box or and click signup button ""
+    Then user should see red message under blank password box "Please Enter Atleast 5 Character Password."
+
+  Scenario: user_should_retype_same_password_to_confirmation_box
+    When user must type same password to the confirmation box and click sigup button "12345"
+    Then user should not see red message under confirmation box
+
+  Scenario:  user_do_not_retype_same_password_to_confirmation_box
+    When user type different password to confirmation box and click signup button "123"
+    Then user see red message under confirmation box "Password doesn't match!"

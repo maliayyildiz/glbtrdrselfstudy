@@ -379,7 +379,7 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_see_red_message(java.lang.String)"
 });
 formatter.result({
-  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Name can not contain special character]\u003e but was:\u003c[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat stepdefinitions.SignupEmailStepDefinitions.user_see_red_message(SignupEmailStepDefinitions.java:85)\n\tat ✽.user see red message \"Name can not contain special character\"(file:///Users/mehmetali/IdeaProjects/glbtrdrselfstudy/src/test/resources/features/glb_signup.feature:28)\n",
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Name can not contain special character]\u003e but was:\u003c[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepdefinitions.SignupEmailStepDefinitions.user_see_red_message(SignupEmailStepDefinitions.java:85)\r\n\tat ✽.user see red message \"Name can not contain special character\"(file:///C:/Users/YSMNI/IdeaProjects/GlbTrdrSelfStudy/src/test/resources/features/glb_signup.feature:28)\r\n",
   "status": "failed"
 });
 formatter.embedding("image/png", "embedded0.png", "screenshoots");
@@ -544,8 +544,7 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
 });
 formatter.result({
-  "error_message": "org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer\n  (Session info: chrome\u003d86.0.4240.80)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Mehmets-MacBook-Air.local\u0027, ip: \u0027fe80:0:0:0:8bf:751d:203c:15f4%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.6\u0027, java.version: \u00271.8.0_251\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.80, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/2g/s60gg7qj3xx...}, goog:chromeOptions: {debuggerAddress: localhost:55663}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 4be2f5417bc62a6ae0d7493337241e5e\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\n\tat stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page(SignupEmailStepDefinitions.java:21)\n\tat ✽.user is on the global trader page(file:///Users/mehmetali/IdeaProjects/glbtrdrselfstudy/src/test/resources/features/glb_signup.feature:5)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "user clicks on Join Now button",
@@ -555,7 +554,7 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user is on Login_Registration page",
@@ -565,7 +564,7 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "user_leave_phone_box_blank",
@@ -585,7 +584,7 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_leave_phone_box_blank()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "user see red message under phone box \"Please Enter Your Phone.\"",
@@ -595,9 +594,365 @@ formatter.match({
   "location": "stepdefinitions.SignupEmailStepDefinitions.user_see_red_message_under_phone_box(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c[Please Enter Your Phone.]\u003e but was:\u003c[]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat stepdefinitions.SignupEmailStepDefinitions.user_see_red_message_under_phone_box(SignupEmailStepDefinitions.java:112)\r\n\tat ✽.user see red message under phone box \"Please Enter Your Phone.\"(file:///C:/Users/YSMNI/IdeaProjects/GlbTrdrSelfStudy/src/test/resources/features/glb_signup.feature:40)\r\n",
+  "status": "failed"
 });
 formatter.embedding("image/png", "embedded1.png", "screenshoots");
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "user is on home page and click join now button",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the global trader page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Join Now button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on Login_Registration page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "user_should_able_to_signup_with_valid_password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@hooks"
+    }
+  ]
+});
+formatter.step({
+  "name": "user provide valid password into password box and click signup button \"12345\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_provide_valid_password_into_password_box_and_click_signup_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should not see red message under password box",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_not_see_red_message_under_password_box()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "user is on home page and click join now button",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the global trader page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Join Now button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on Login_Registration page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "user_should_not_able_to_signup_with_invalid_password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@hooks"
+    }
+  ]
+});
+formatter.step({
+  "name": "user provide invalid password into password box or and click signup button \"123\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_provide_invalid_password_into_password_box_or_and_click_signup_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see red message under password box \"Please Enter Atleast 5 Character Password.\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_see_red_message_under_password_box(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "user is on home page and click join now button",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the global trader page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Join Now button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on Login_Registration page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "user_should_not_able_to_signup_without_providing_password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@hooks"
+    }
+  ]
+});
+formatter.step({
+  "name": "user not provide password into password box or and click signup button \"\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_not_provide_password_into_password_box_or_and_click_signup_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see red message under blank password box \"Please Enter Atleast 5 Character Password.\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_see_red_message_under_blank_password_box(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "user is on home page and click join now button",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the global trader page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Join Now button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on Login_Registration page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "user_should_retype_same_password_to_confirmation_box",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@hooks"
+    }
+  ]
+});
+formatter.step({
+  "name": "user must type same password to the confirmation box and click sigup button \"12345\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_must_type_same_password_to_the_confirmation_box_and_click_sigup_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should not see red message under confirmation box",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_should_not_see_red_message_under_confirmation_box()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "user is on home page and click join now button",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the global trader page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks on Join Now button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_clicks_on_Join_Now_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on Login_Registration page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_is_on_Login_Registration_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "user_do_not_retype_same_password_to_confirmation_box",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@hooks"
+    }
+  ]
+});
+formatter.step({
+  "name": "user type different password to confirmation box and click signup button \"123\"",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_type_different_password_to_confirmation_box_and_click_signup_button(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user see red message under confirmation box \"Password doesn\u0027t match!\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepdefinitions.SignupEmailStepDefinitions.user_see_red_message_under_confirmation_box(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
 formatter.after({
   "status": "passed"
 });

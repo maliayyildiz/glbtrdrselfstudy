@@ -27,6 +27,10 @@ public class GlobalTraderSignupPage {
     public WebElement redNameMessage;
     @FindBy(xpath = "(//span[@class='validation_alert'])[3]")
     public WebElement redPhoneMessage;
+    @FindBy(id = "alert_password")
+    public WebElement redPasswordMessage;
+    @FindBy(id = "alert_confirm_password")
+    public WebElement repasswordMessage;
 
 
 
