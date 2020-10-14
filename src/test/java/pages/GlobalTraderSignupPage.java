@@ -23,6 +23,10 @@ public class GlobalTraderSignupPage {
     public WebElement signUpButton;
     @FindBy(id = "alert_email_address")
     public WebElement redEmailMessage;
+    @FindBy (id = "alert_user_name")
+    public WebElement redNameMessage;
+    @FindBy(xpath = "(//span[@class='validation_alert'])[3]")
+    public WebElement redPhoneMessage;
 
 
 

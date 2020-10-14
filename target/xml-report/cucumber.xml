@@ -1,21 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="30.807">
-<testcase classname="glb_signup" name="user_should_signup_with_valid_email" time="16.365">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="8" time="171.745">
+<testcase classname="glb_signup" name="user_should_signup_with_valid_email" time="23.758">
 <system-out><![CDATA[Given user is on the global trader page.....................................passed
 When user clicks on Join Now button.........................................passed
-Given user is on Login/Registration page....................................passed
+Given user is on Login_Registration page....................................passed
 When user clicks email box and input valid data "mv@vm.com".................passed
 When clicks signup button...................................................passed
 Then user should not see red message under email box........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="glb_signup" name="user_should_not_signup_with_invalid_email" time="14.02">
+<testcase classname="glb_signup" name="user_should_not_signup_with_invalid_email" time="17.353">
 <system-out><![CDATA[Given user is on the global trader page.....................................passed
 When user clicks on Join Now button.........................................passed
-Given user is on Login/Registration page....................................passed
+Given user is on Login_Registration page....................................passed
 When user clicks email box and input invalid data "mw"......................passed
 When clicks signup button...................................................passed
-Then user should see red message under email box............................passed
+Then user should see red message under email box "Please Enter Valid Email Address".passed
 ]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_should_not_leave_email_field_blank" time="16.03">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login_Registration page....................................passed
+When user leave email field blank...........................................passed
+Then user should see red message under blank email box "Please Enter Email Address".passed
+]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_should_input_name_in_name_box" time="16.407">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login_Registration page....................................passed
+When user input name into name box "Ali"....................................passed
+Then red message should not display.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_should_not_input_special_character_for_name" time="16.923">
+<failure message="expected:&lt;[Name can not contain special character]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login_Registration page....................................passed
+When user use special character in name "Ali*"..............................passed
+Then user see red message "Name can not contain special character"..........failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<[Name can not contain special character]> but was:<[]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepdefinitions.SignupEmailStepDefinitions.user_see_red_message(SignupEmailStepDefinitions.java:85)
+	at ✽.user see red message "Name can not contain special character"(file:///Users/mehmetali/IdeaProjects/glbtrdrselfstudy/src/test/resources/features/glb_signup.feature:28)
+]]></failure>
+</testcase>
+<testcase classname="glb_signup" name="user_should_not_leave_name_field_blank" time="17.033">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login_Registration page....................................passed
+When user leave name field blank............................................passed
+Then user should see red message under blank name box "Please Enter Your Name.".passed
+]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_should_provide_valid_phone_number" time="16.598">
+<system-out><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks on Join Now button.........................................passed
+Given user is on Login_Registration page....................................passed
+When user provide valid phone number "0773091590"...........................passed
+Then user should not see red message under phone box........................passed
+]]></system-out>
+</testcase>
+<testcase classname="glb_signup" name="user_leave_phone_box_blank" time="47.26">
+<failure message="disconnected: Unable to receive message from renderer&#10;  (Session info: chrome=86.0.4240.80)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'Mehmets-MacBook-Air.local', ip: 'fe80:0:0:0:8bf:751d:203c:15f4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.80, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/2g/s60gg7qj3xx...}, goog:chromeOptions: {debuggerAddress: localhost:55663}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 4be2f5417bc62a6ae0d7493337241e5e" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user is on the global trader page.....................................failed
+When user clicks on Join Now button.........................................skipped
+Given user is on Login_Registration page....................................skipped
+When user leave phone box blank.............................................skipped
+Then user see red message under phone box "Please Enter Your Phone."........skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: disconnected: Unable to receive message from renderer
+  (Session info: chrome=86.0.4240.80)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Mehmets-MacBook-Air.local', ip: 'fe80:0:0:0:8bf:751d:203c:15f4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '1.8.0_251'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.80, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/2g/s60gg7qj3xx...}, goog:chromeOptions: {debuggerAddress: localhost:55663}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 4be2f5417bc62a6ae0d7493337241e5e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
+	at stepdefinitions.SignupEmailStepDefinitions.user_is_on_the_global_trader_page(SignupEmailStepDefinitions.java:21)
+	at ✽.user is on the global trader page(file:///Users/mehmetali/IdeaProjects/glbtrdrselfstudy/src/test/resources/features/glb_signup.feature:5)
+]]></failure>
 </testcase>
 </testsuite>
