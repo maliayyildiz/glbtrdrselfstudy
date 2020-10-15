@@ -11,4 +11,7 @@ public class GlobalTraderMainPage {
     }
     @FindBy(linkText = "Join Now")
     public WebElement  joinNowButton;
+    @FindBy(linkText = "Sign In")
+    public WebElement signInButton;
+
 }

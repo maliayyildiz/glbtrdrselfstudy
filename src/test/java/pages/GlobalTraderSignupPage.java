@@ -31,7 +31,8 @@ public class GlobalTraderSignupPage {
     public WebElement redPasswordMessage;
     @FindBy(id = "alert_confirm_password")
     public WebElement repasswordMessage;
-
+    @FindBy(xpath = "//div[@class='alert alert-success']")
+    public WebElement successMessage;
 
 
 

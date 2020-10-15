@@ -1,123 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="766.777">
-<testcase classname="glb_signup" name="user_should_signup_with_valid_email" time="40.631">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user clicks email box and input valid data "mv@vm.com".................passed
-When clicks signup button...................................................passed
-Then user should not see red message under email box........................passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_signup_with_invalid_email" time="30.226">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user clicks email box and input invalid data "mw"......................passed
-When clicks signup button...................................................passed
-Then user should see red message under email box "Please Enter Valid Email Address".passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_leave_email_field_blank" time="43.867">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user leave email field blank...........................................passed
-Then user should see red message under blank email box "Please Enter Email Address".passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_input_name_in_name_box" time="43.675">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user input name into name box "Ali"....................................passed
-Then red message should not display.........................................passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_input_special_character_for_name" time="49.904">
-<failure message="expected:&lt;[Name can not contain special character]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user use special character in name "Ali*"..............................passed
-Then user see red message "Name can not contain special character"..........failed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="47.339">
+<testcase classname="Global Trader Login Page Forget Password" name="if user forget the password, user can recreate password by clicking forget password button" time="46.87">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[text()='Your new Password Send Successfully On Your Email']&quot;}&#10;  (Session info: chrome=86.0.4240.75)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-NH68CP9', ip: '10.49.171.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\YSMNI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: dcdc74428fefcc2005e27012cd1702c7&#10;*** Element info: {Using=xpath, value=//*[text()='Your new Password Send Successfully On Your Email']}" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user is on the global trader page.....................................passed
+When user clicks sign in button.............................................passed
+When user is on Login page "Login"..........................................passed
+When user clicks forget password button on login page.......................passed
+When user is on "Forgot Form" page..........................................passed
+When user input valid email to email box....................................passed
+When user clicks forget password button.....................................passed
+Then verify new password link has been send.................................failed
 
 StackTrace:
-org.junit.ComparisonFailure: expected:<[Name can not contain special character]> but was:<[]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefinitions.SignupEmailStepDefinitions.user_see_red_message(SignupEmailStepDefinitions.java:85)
-	at ✽.user see red message "Name can not contain special character"(file:///C:/Users/YSMNI/IdeaProjects/GlbTrdrSelfStudy/src/test/resources/features/glb_signup.feature:28)
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Your new Password Send Successfully On Your Email']"}
+  (Session info: chrome=86.0.4240.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-NH68CP9', ip: '10.49.171.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\YSMNI\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53206}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: dcdc74428fefcc2005e27012cd1702c7
+*** Element info: {Using=xpath, value=//*[text()='Your new Password Send Successfully On Your Email']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.isDisplayed(Unknown Source)
+	at stepdefinitions.SignInStepDefinitions.verify_new_password_link_has_been_send(SignInStepDefinitions.java:77)
+	at ✽.verify new password link has been send(file:///C:/Users/YSMNI/IdeaProjects/GlbTrdrSelfStudy/src/test/resources/features/glbltrdr_sign_in_forge_password.feature:13)
 ]]></failure>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_leave_name_field_blank" time="68.654">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user leave name field blank............................................passed
-Then user should see red message under blank name box "Please Enter Your Name.".passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_provide_valid_phone_number" time="56.109">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user provide valid phone number "0773091590"...........................passed
-Then user should not see red message under phone box........................passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_leave_phone_box_blank" time="69.321">
-<failure message="expected:&lt;[Please Enter Your Phone.]&gt; but was:&lt;[]&gt;" type="org.junit.ComparisonFailure"><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user leave phone box blank.............................................passed
-Then user see red message under phone box "Please Enter Your Phone."........failed
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<[Please Enter Your Phone.]> but was:<[]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefinitions.SignupEmailStepDefinitions.user_see_red_message_under_phone_box(SignupEmailStepDefinitions.java:112)
-	at ✽.user see red message under phone box "Please Enter Your Phone."(file:///C:/Users/YSMNI/IdeaProjects/GlbTrdrSelfStudy/src/test/resources/features/glb_signup.feature:40)
-]]></failure>
-</testcase>
-<testcase classname="glb_signup" name="user_should_able_to_signup_with_valid_password" time="79.86">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user provide valid password into password box and click signup button "12345".passed
-Then user should not see red message under password box.....................passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_able_to_signup_with_invalid_password" time="56.968">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user provide invalid password into password box or and click signup button "123".passed
-Then user should see red message under password box "Please Enter Atleast 5 Character Password.".passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_not_able_to_signup_without_providing_password" time="93.407">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user not provide password into password box or and click signup button "".passed
-Then user should see red message under blank password box "Please Enter Atleast 5 Character Password.".passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_should_retype_same_password_to_confirmation_box" time="51.811">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user must type same password to the confirmation box and click sigup button "12345".passed
-Then user should not see red message under confirmation box.................passed
-]]></system-out>
-</testcase>
-<testcase classname="glb_signup" name="user_do_not_retype_same_password_to_confirmation_box" time="81.571">
-<system-out><![CDATA[Given user is on the global trader page.....................................passed
-When user clicks on Join Now button.........................................passed
-Given user is on Login_Registration page....................................passed
-When user type different password to confirmation box and click signup button "123".passed
-Then user see red message under confirmation box "Password doesn't match!"..passed
-]]></system-out>
 </testcase>
 </testsuite>

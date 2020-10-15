@@ -1,5 +1,5 @@
 @hooks
-Feature: glb_signup
+Feature: glb_signup features
 
   Background:user is on home page and click join now button
     Given user is on the global trader page
@@ -17,44 +17,55 @@ Feature: glb_signup
 
   Scenario: user_should_not_leave_email_field_blank
     When user leave email field blank
+    When  clicks signup button
     Then user should see red message under blank email box "Please Enter Email Address"
 
   Scenario: user_should_input_name_in_name_box
     When user input name into name box "Ali"
+    When  clicks signup button
     Then red message should not display
 
   Scenario: user_should_not_input_special_character_for_name
     When user use special character in name "Ali*"
+    When  clicks signup button
     Then user see red message "Name can not contain special character"
 
   Scenario: user_should_not_leave_name_field_blank
     When user leave name field blank
+    When  clicks signup button
     Then user should see red message under blank name box "Please Enter Your Name."
 
   Scenario:  user_should_provide_valid_phone_number
     When user provide valid phone number "0773091590"
+    When  clicks signup button
     Then user should not see red message under phone box
 
   Scenario:  user_leave_phone_box_blank
     When user leave phone box blank
+    When  clicks signup button
     Then user see red message under phone box "Please Enter Your Phone."
 
   Scenario: user_should_able_to_signup_with_valid_password
-    When user provide valid password into password box and click signup button "12345"
+    When user provide valid password into password box  "12345"
+    When  clicks signup button
     Then user should not see red message under password box
 
   Scenario: user_should_not_able_to_signup_with_invalid_password
-    When user provide invalid password into password box or and click signup button "123"
+    When user provide invalid password into password box "123"
+    When  clicks signup button
     Then user should see red message under password box "Please Enter Atleast 5 Character Password."
 
   Scenario: user_should_not_able_to_signup_without_providing_password
-    When user not provide password into password box or and click signup button ""
+    When user not provide password into password box ""
+    When  clicks signup button
     Then user should see red message under blank password box "Please Enter Atleast 5 Character Password."
 
   Scenario: user_should_retype_same_password_to_confirmation_box
-    When user must type same password to the confirmation box and click sigup button "12345"
+    When user must type same password to the confirmation box  "12345"
+    When  clicks signup button
     Then user should not see red message under confirmation box
 
   Scenario:  user_do_not_retype_same_password_to_confirmation_box
-    When user type different password to confirmation box and click signup button "123"
+    When user type different password to confirmation box  "123"
+    When  clicks signup button
     Then user see red message under confirmation box "Password doesn't match!"

@@ -13,9 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@forgotpassword",
-        dryRun = false
-)
+        tags = "@smoke",
+        dryRun = false)
 
-public class Runner {
+public class SmokeTestRunner {
 }
